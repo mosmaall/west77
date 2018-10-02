@@ -151,7 +151,7 @@ body {
  }
  @media screen and (max-width:576px) {
      .hero-section {
-         background: url(images/mobile-bg.png);
+         background: url(images/hero-mobile.jpg);
          background-position: center bottom;
          background-size: cover;
      }

@@ -152,10 +152,17 @@ body {
  @media screen and (max-width:576px) {
      .hero-section {
          background: url(images/hero-mobile.jpg);
-         background-position: center bottom;
+         background-position: center center;
          background-size: cover;
      }
  }
+ @media screen and (max-width:576px) and (orientation: landscape) {
+    .hero-section {
+        background: url(images/hero-bg.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+}
  .logo-big {
      display: inline-block;
      background: url(images/logo-big.png);
@@ -164,6 +171,7 @@ body {
      height: 112px;
  }
  .hero-caption {
+     padding-right: 30px;
      position: absolute;
      left: 10%;
      bottom: 100px;
@@ -186,7 +194,7 @@ body {
  
  @media screen and (max-width:576px) {
      .hero-caption {
-         top: 140px;
+         top: 600px;
          bottom: unset;
      }
      .logo-big {
@@ -196,14 +204,15 @@ body {
           display: none;
      }
      .hero-1 {
-         font-size: 35px;
-         margin-top: -20px;
+         font-size: 18px;
      }
      .hero-2 {
+         display: none;
          font-size: 60px;
          margin-top: -50px;
      }
      .hero-3 {
+         display: none;
          font-size: 26px;
          margin-top: -20px;
      }
@@ -229,13 +238,13 @@ body {
  }
  .wrapper h2 {
     font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
-     font-size: 60px;
+     font-size: 30px;
      text-align: center;
-     margin-bottom: 0;
+     margin-bottom: 10px;
  }
  @media screen and (max-width:576px) {
      .wrapper h2 {
-         font-size: 40px;
+         font-size: 28px;
      }
  }
  .register-section .wrapper {
@@ -243,10 +252,10 @@ body {
  }
  .register-section .wrapper .small {
     font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
-     font-size: 22px;
+     font-size: 12px;
      text-align: center;
      margin-bottom: 0;
-     margin-top: -25px;
+     margin-top: -12px;
  }
  @media screen and (max-width:576px) {
      .register-section .wrapper .small {
@@ -266,7 +275,7 @@ body {
  .form-control {
      margin-bottom: 15px;
      font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
-     font-size: 22px;
+     font-size: 16px;
  }
  select.form-control {
      height: 47px !important;
@@ -278,9 +287,12 @@ body {
  .btn-submit {
      background: #C4952D;
      font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
-     font-size: 22px;
+     font-size: 15px;
      color: #fff;
  }
+ section#register {
+  margin-bottom: 3em;
+  }
  .project-wrapper {
      background: url(images/project-bg.jpg) no-repeat scroll center top;
      padding: 15px 0;
@@ -308,19 +320,22 @@ body {
      top: -80px;
      bottom: unset;
  }
+ .project-value{
+   text-align: right;
+ }
  #project_info .carousel-indicators li {
     width: auto;
     height: auto;
     border-bottom: solid 5px rgba(128,130,133,1);
     text-indent: 0;
     background: none;
-    font-size: 35px;
+    font-size: 16px;
     margin-left: 10px;
     margin-right: 10px;
  }
  @media screen and (max-width:576px) {
      #project_info .carousel-indicators li {
-         font-size: 25px;
+         font-size: 16px;
      }
  }
  #project_info .carousel-indicators li.active {
@@ -329,8 +344,13 @@ body {
  
  .project-wrapper h3 {
     font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
-     font-size: 40px;
+     font-size: 20px;
  }
+
+ .project-wrapper .row {
+   font-size: 14px;
+ }
+
  #gallery {
      margin-bottom: 50px;
  }
@@ -346,7 +366,7 @@ body {
     margin-right: 0;
  }
  #gallery .carousel-indicators li {
-    width: 25%;
+    width: 16%;
     height: 60px;
     background-color: rgba(128,130,133,1);
     background-size: cover;
@@ -359,13 +379,14 @@ body {
  }
  #gallery .carousel-item img {
      max-height: 500px;
+     max-width: 600px;
  }
  @media screen and (max-width:576px) {
      #gallery .carousel-indicators {
-         bottom: -50px;
+         bottom: -60px;
      }
      #gallery .carousel-indicators li {
-         height: 20px;
+         height: 30px;
      }
      #gallery .carousel-item img {
          max-height: unset;

@@ -234,7 +234,7 @@ body {
  }
  @media screen and (max-width:576px) {
      .wrapper h2 {
-         font-size: 28px;
+         font-size: 26px;
      }
  }
  .register-section .wrapper {
@@ -256,7 +256,7 @@ body {
      text-align: center;
      margin: 0 auto 0;
      width: 150px;
-     border-top: solid 2px #C4952D;
+     border-top: solid 2px #008BA5;
  }
  
  form {
@@ -275,7 +275,7 @@ body {
      font-size: 22px;
  }
  .btn-submit {
-     background: #C4952D;
+     background: #134150;
      font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
      font-size: 18px;
      color: #fff;
@@ -327,9 +327,12 @@ body {
      #project_info .carousel-indicators li {
          font-size: 16px;
      }
+     .btn-submit{
+        font-size: 14px;
+    }
  }
  #project_info .carousel-indicators li.active {
-     border-bottom-color: #C4952D;
+     border-bottom-color: #008BA5;
  }
  
  .project-wrapper h3 {

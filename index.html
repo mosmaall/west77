@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>West 77</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An undeniable space for generations. Be outstanding by the splendour 6M height double volume living room, a master penthouse, a private elevator, an edgeless rooftop 10M swimming pool and the unique 9 parking spaces."/>
-	<meta name="keywords" content=" D8 Residence,  Luxury vertical house,  Luxury vertical residence,  Luxury residence,  Ekkamai - Ramintra,  Ladproa 88"/>
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content="THE EXPRESSION OF SUCCESS" />
-	<meta property="og:description" content="An undeniable space for generations. Be outstanding by the splendour 6M height double volume living room, a master penthouse, a private elevator, an edgeless rooftop 10M swimming pool and the unique 9 parking spaces." />
-	<meta property="og:url" content="https://d8residence.com/" />
-	<meta property="og:image" content="https://d8residence.com/wp-content/uploads/2018/03/fb.jpg" />
-	<meta property="og:site_name" content="D8 Residence Luxury Vertical House, Ekkamai &#8211; Ramintra" />
-	<meta name="twitter:card" content="https://d8residence.com/wp-content/uploads/2018/03/fb.jpg" />
-	<meta name="twitter:description" content="An undeniable space for generations. Be outstanding by the splendour 6M height double volume living room, a master penthouse, a private elevator, an edgeless rooftop 10M swimming pool and the unique 9 parking spaces." />
-  <meta name="twitter:title" content="THE EXPRESSION OF SUCCESS" />
+    <title>West 77</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An undeniable space for generations. Be outstanding by the splendour 6M height double volume living room, a master penthouse, a private elevator, an edgeless rooftop 10M swimming pool and the unique 9 parking spaces."/>
+    <meta name="keywords" content=" D8 Residence,  Luxury vertical house,  Luxury vertical residence,  Luxury residence,  Ekkamai - Ramintra,  Ladproa 88"/>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="THE EXPRESSION OF SUCCESS" />
+    <meta property="og:description" content="An undeniable space for generations. Be outstanding by the splendour 6M height double volume living room, a master penthouse, a private elevator, an edgeless rooftop 10M swimming pool and the unique 9 parking spaces." />
+    <meta property="og:url" content="https://d8residence.com/" />
+    <meta property="og:image" content="https://d8residence.com/wp-content/uploads/2018/03/fb.jpg" />
+    <meta property="og:site_name" content="D8 Residence Luxury Vertical House, Ekkamai &#8211; Ramintra" />
+    <meta name="twitter:card" content="https://d8residence.com/wp-content/uploads/2018/03/fb.jpg" />
+    <meta name="twitter:description" content="An undeniable space for generations. Be outstanding by the splendour 6M height double volume living room, a master penthouse, a private elevator, an edgeless rooftop 10M swimming pool and the unique 9 parking spaces." />
+    <meta name="twitter:title" content="THE EXPRESSION OF SUCCESS" /> -->
 
-    <link href="dist/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="dist/animate.css" rel="stylesheet" media="all">
-    <link href="dist/hamburgers.css" rel="stylesheet" media="all">
-    <link href="dist/fonts/stylesheet.css" rel="stylesheet" media="all">
-    <link href="dist/font-awesome/css/all.min.css" rel="stylesheet" media="screen">
-    <link href="dist/swipebox/src/css/swipebox.min.css" rel="stylesheet" media="screen">
+    <link href="dist/bootstrap.min.css" rel="stylesheet">
     <link href="dist/style.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" type="text/css" href="dist/plugin.css">
 
     <!-- header -->
     <header class="main-header">
@@ -256,93 +250,6 @@
       <footer class="main-footer">
         <p style="text-align: center;">For more information, call  0818717711 or 0895556255</p>
       </div>
-
     </div>
-
-    <script src="dist/jquery.js"></script>
-    <script src="dist/bootstrap/js/bootstrap.min.js"></script>
-    <script src="dist/isotope.min.js"></script>
-    <script src="dist/imagesloaded.min.js"></script>
-    <script src="dist/swipebox/src/js/jquery.swipebox.min.js"></script>
-    <script src="dist/wow.min.js"></script>
-    <script src="dist/carousel-swipe.js"></script>
-
-    <!-- Form -->
-    <script src="dist/jquery.form.min.js"></script>
-    <!-- Plugin inc --> 
-    <script src="dist/plugin-inc.js"></script>
-    <script src="dist/impromptu.js"></script>
-
-    <script>
-      $(document).ready(function(){
-        init();
-        $(window).resize(function(){
-          init();
-        });
-
-        $('#project_info, #gallery').carousel({
-          interval: 0
-        });
-        $('#gallery').on('slid.bs.carousel', function () {
-          $('.swipebox').swipebox();
-        });
-        $('.swipebox').swipebox();
-
-        $('.swipebox-map').swipebox();
-
-        $(window).scroll(function(e){
-          var scrollTop = $(this).scrollTop();
-          if (scrollTop >= 150) {
-            $('header').addClass('has-color');
-          } else {
-            $('header').removeClass('has-color');
-          }
-          //console.log(scrollTop + '===' + windowHeight);
-        });
-
-        $('.main-nav > ul > li > a, a.arrow-down').click(function(e) {
-          // Prevent a page reload when a link is pressed
-          e.preventDefault();
-          // Call the scroll function
-          goToByScroll($(this).attr("href"));
-        });
-
-        $('.m-menu > ul > li > a').click(function(e){
-          e.preventDefault();
-          goToByScroll($(this).attr("href"));
-          $('#mobile_toggle').toggleClass('is-active');
-          $('.m-menu').toggleClass('opened');
-          $('.page').toggleClass('opened');
-          return false;
-        });
-
-        new WOW().init();
-
-        $('#mobile_toggle').click(function(e){
-          $(this).toggleClass('is-active');
-          $('.m-menu').toggleClass('opened');
-          $('.page').toggleClass('opened');
-          return false;
-        });
-      });
-
-      function goToByScroll(id){
-        $('html,body').animate({
-        scrollTop: $(id).offset().top},'slow');
-      }
-
-      function init() {
-        var windowWidth = $(window).width();
-        var windowHeight = $(window).height();
-        $('#main').height(windowHeight);
-        $('#register, #masterplan, #location, #project-information').css('padding-top', '100px');
-        //$('#register, #masterplan, #location, #project-information').height(windowHeight-250);
-        /*if(windowWidth > 576) {
-          $('#gallery .carousel-item img').css('max-height', '400px');
-        } else {
-          $('#gallery .carousel-item img').css('max-width', '100%');
-        }*/
-      }
-    </script>
   </body>
 </html>

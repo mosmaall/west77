@@ -567,6 +567,10 @@ footer span {
     width: 80px;
     height: 50px;
   }
+
+  footer {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width:576px) and (orientation: landscape) {

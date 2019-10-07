@@ -4,6 +4,27 @@
 	fadeInBg();
 })();
 
+function showFullImage(name) {
+	const popup = document.createElement('div');
+	popup.className = "popup";
+
+	const button = document.createElement('button');
+	button.innerHTML = "X"
+	button.onclick = () => closePopup(this);
+
+	const img = document.createElement('img');
+	img.src = `dist/images/gallery/rsz_gallery_${name}.jpg`
+
+	popup.appendChild(img);
+	popup.appendChild(button);
+
+	document.body.appendChild(popup);
+}
+
+function closePopup() {
+	document.getElementsByClassName('popup')[0].remove();
+}
+
 function isScroll(e) {
     var nav = document.getElementsByTagName('header')[0];
     if (document.documentElement.scrollTop > 100 || document.body.scrollTop > window.innerHeight) {

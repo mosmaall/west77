@@ -18,6 +18,7 @@
 
     <link href="dist/bootstrap.min.css" rel="stylesheet">
     <link href="dist/style.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
 
     <!-- header -->
     <header>
@@ -48,9 +49,39 @@
       </div>
     </section>
   
-    <section id="gallery">
-      dqwdqw
-    </section>
+    <div class="container">
+      <section id="gallery">
+        <p>GALLERY</p>
+        <div class="my-slider">
+          <div><img src="dist/images/gallery/rsz_gallery_1.jpg" onclick="showFullImage(1)"/></div>
+          <div><img src="dist/images/gallery/rsz_gallery_2.jpg" onclick="showFullImage(2)"/></div>
+          <div><img src="dist/images/gallery/rsz_gallery_3.jpg" onclick="showFullImage(3)"/></div>
+          <div><img src="dist/images/gallery/rsz_gallery_4.jpg" onclick="showFullImage(4)"/></div>
+          <div><img src="dist/images/gallery/rsz_gallery_5.jpg" onclick="showFullImage(5)"></div>
+        </div>
+        <div id="customize-controls">
+          <button>to</button>
+          <button>to</button>
+        </div>
+        <ul id="gallery-thumbnails">
+          <li data-nav="0" tabindex="-1">
+            <img src="dist/images/gallery/rsz_gallery_1.jpg" width="16%" height="auto"/>
+          </li>
+          <li data-nav="0" tabindex="-1">
+            <img src="dist/images/gallery/rsz_gallery_2.jpg" width="16%" height="auto"/>
+          </li>
+          <li data-nav="0" tabindex="-1">
+            <img src="dist/images/gallery/rsz_gallery_3.jpg" width="16%" height="auto"/>
+          </li>
+          <li data-nav="0" tabindex="-1">
+            <img src="dist/images/gallery/rsz_gallery_4.jpg" width="16%" height="auto"/>
+          </li>
+          <li data-nav="0" tabindex="-1">
+            <img src="dist/images/gallery/rsz_gallery_5.jpg" width="16%" height="auto"/>
+          </li>
+        </ul>
+      </section>
+    </div>
 
     <section id="information">
       dqwdqw
@@ -66,4 +97,15 @@
 
   </body>
   <script src="./dist/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script>
+    var slider = tns({
+      "container": '.my-slider',
+      "items": 1,
+      "controlsContainer": "#customize-controls",
+      "navContainer": "#gallery-thumbnails",
+      "navAsThumbnails": true,
+      "swipeAngle": false,
+    });
+  </script>
 </html>

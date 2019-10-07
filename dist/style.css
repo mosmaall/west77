@@ -9,6 +9,10 @@ body {
   font-size: 16px;
 }
 
+ul li {
+  list-style: none;
+}
+
 /* header */
 
 header {
@@ -45,6 +49,11 @@ header a {
 header a:hover {
   color: #fff;
   opacity: 0.8;
+  text-decoration: none;
+}
+
+header a:active, a:focus {
+  color: #fff;
   text-decoration: none;
 }
 
@@ -120,7 +129,7 @@ header a:hover {
   position: relative;
   margin-top: -20px;
   opacity: 0;
-  height: 900px;
+  height: 850px;
   background-image: url('./images/bg/1600.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -176,8 +185,23 @@ header a:hover {
 }
 
 #gallery {
-  height: 600px;
-  background-color: red;
+  margin-top: 100px;
+  text-align: center;
+}
+
+#gallery p {
+  position: relative;
+  font-size: 6rem;
+}
+
+#gallery p::after {
+  content: '';
+  background-color: #008BA5;
+  height: 2px;
+  width: 135px;
+  margin: 0 auto;
+  display: block;
+  margin-top: -15px;
 }
 
 @keyframes fade-in {

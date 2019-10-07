@@ -161,19 +161,22 @@
                   <div class="border-1"></div>
                   <div class="row justify-content-md-center">
                     <div class="col-lg-8">
-                       <form>
+                       <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                         <div class="form-row">
+                          <p style="display: none;">
+                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                          </p>
                           <div class="col-md-4">
-                            <input type="text" class="form-control" placeholder="Name*" id="TXTcontact_firstname" name="TXTcontact_firstname">
+                            <input type="text" class="form-control" placeholder="Name*" name="firstname">
                           </div>
                           <div class="col-md-4">
-                            <input type="text" class="form-control" placeholder="Last Name*" id="TXTcontact_lastname" name="TXTcontact_lastname">
+                            <input type="text" class="form-control" placeholder="Last Name*" name="lastname">
                           </div>
                           <div class="col-md-4">
-                            <input type="text" class="form-control" placeholder="Phone*" id="TXTcontact_phone" name="TXTcontact_phone">
+                            <input type="text" class="form-control" placeholder="Phone*" name="phone">
                           </div>
                           <div class="col-md-12">
-                            <input type="text" class="form-control" placeholder="Email address*" id="TXTcontact_email" name="TXTcontact_email">
+                            <input type="text" class="form-control" placeholder="Email address*" name="email">
                           </div>
                           <div class="col-md-12">
                             <input type="hidden" name="ref" value="direct">

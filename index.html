@@ -10,9 +10,9 @@
     <meta property="og:title" content="WEST 77" />
     <meta property="og:description" content="All New 300 SQ.M. Multi-Family Residence" />
     <meta property="og:url" content="https://www.westernaddress.com/" />
-    <meta property="og:image" content="https://www.westernaddress.com/images/bg/800.jpg" />
+    <meta property="og:image" content="https://www.westernaddress.com/images/gallery/rsz_gallery_1.jpg" />
     <meta property="og:site_name" content="West77 All New 300 SQ.M. Multi-Family Residence" />
-    <meta name="twitter:card" content="https://www.westernaddress.com/images/bg/800.jpg" />
+    <meta name="twitter:card" content="https://www.westernaddress.com/images/gallery/rsz_gallery_1.jpg" />
     <meta name="twitter:description" content="All New 300 SQ.M. Multi-Family Residence." />
     <meta name="twitter:title" content="WEST77" />
 
@@ -52,32 +52,34 @@
     <div class="container">
       <section id="gallery">
         <p>GALLERY</p>
-        <div class="my-slider">
-          <div><img src="dist/images/gallery/rsz_gallery_1.jpg" onclick="showFullImage(1)"/></div>
-          <div><img src="dist/images/gallery/rsz_gallery_2.jpg" onclick="showFullImage(2)"/></div>
-          <div><img src="dist/images/gallery/rsz_gallery_3.jpg" onclick="showFullImage(3)"/></div>
-          <div><img src="dist/images/gallery/rsz_gallery_4.jpg" onclick="showFullImage(4)"/></div>
-          <div><img src="dist/images/gallery/rsz_gallery_5.jpg" onclick="showFullImage(5)"></div>
-        </div>
-        <div id="customize-controls">
-          <button>to</button>
-          <button>to</button>
+        <div style="position: relative;">
+          <div class="my-slider">
+            <div><img src="dist/images/gallery/rsz_gallery_1.jpg" onclick="showFullImage(1)"/></div>
+            <div><img src="dist/images/gallery/rsz_gallery_2.jpg" onclick="showFullImage(2)"/></div>
+            <div><img src="dist/images/gallery/rsz_gallery_3.jpg" onclick="showFullImage(3)"/></div>
+            <div><img src="dist/images/gallery/rsz_gallery_4.jpg" onclick="showFullImage(4)"/></div>
+            <div><img src="dist/images/gallery/rsz_gallery_5.jpg" onclick="showFullImage(5)"></div>
+          </div>
+          <div id="customize-controls">
+            <button class="btn-left"><i class="arrow left"></i></button>
+            <button class="btn-right"><i class="arrow right"></i></button>
+          </div>
         </div>
         <ul id="gallery-thumbnails">
           <li data-nav="0" tabindex="-1">
-            <img src="dist/images/gallery/rsz_gallery_1.jpg" width="16%" height="auto"/>
+            <img src="dist/images/gallery/rsz_gallery_1.jpg" />
           </li>
           <li data-nav="0" tabindex="-1">
-            <img src="dist/images/gallery/rsz_gallery_2.jpg" width="16%" height="auto"/>
+            <img src="dist/images/gallery/rsz_gallery_2.jpg"/>
           </li>
           <li data-nav="0" tabindex="-1">
-            <img src="dist/images/gallery/rsz_gallery_3.jpg" width="16%" height="auto"/>
+            <img src="dist/images/gallery/rsz_gallery_3.jpg" />
           </li>
           <li data-nav="0" tabindex="-1">
-            <img src="dist/images/gallery/rsz_gallery_4.jpg" width="16%" height="auto"/>
+            <img src="dist/images/gallery/rsz_gallery_4.jpg"/>
           </li>
           <li data-nav="0" tabindex="-1">
-            <img src="dist/images/gallery/rsz_gallery_5.jpg" width="16%" height="auto"/>
+            <img src="dist/images/gallery/rsz_gallery_5.jpg" />
           </li>
         </ul>
       </section>
@@ -208,9 +210,5 @@
       "navAsThumbnails": true,
       "swipeAngle": false,
     });
-    var slider2 = tns({
-      "container": '.info-slider',
-      "items": 1,
-    })
   </script>
 </html>

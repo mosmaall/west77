@@ -8,8 +8,8 @@ function showFullImage(name) {
 	const popup = document.createElement('div');
 	popup.className = "popup";
 
-	const button = document.createElement('button');
-	button.innerHTML = "X"
+	const button = document.createElement('div');
+	button.className = "close";
 	button.onclick = () => closePopup(this);
 
 	const img = document.createElement('img');

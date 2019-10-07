@@ -56,7 +56,7 @@ function scrollAnchors(e, respond = null) {
 	var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
 	const targetAnchor = document.querySelector(targetID);
 	if (!targetAnchor) return;
-	const originalTop = distanceToTop(targetAnchor);
+	const originalTop = distanceToTop(targetAnchor) - 100;
 	window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
 	const checkIfDone = setInterval(function() {
 		const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;

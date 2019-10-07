@@ -13,7 +13,7 @@ ul li {
   list-style: none;
 }
 
-/* header */
+/* --------------------- Header ------------------------- */
 
 header {
   position: fixed;
@@ -111,23 +111,9 @@ header a:active, a:focus {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-@media screen and (max-width:1000px) {
-  header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 70px;
-  }
-  .main-logo {
-    font-size: 3rem;
-  }
-  .hamburger {
-    display: block;
-  }
-  .main-nav {
-    display: none;
-  }
-}
+/* --------------------- End Header ------------------------- */
+
+/* --------------------- Home ------------------------- */
 
 #home {
   position: relative;
@@ -170,37 +156,9 @@ header a:active, a:focus {
   animation: move2 1s;
 }
 
-@media screen and (max-width:1280px) {
-  #home {
-    background-image: url('./images/bg/1280.jpg');
-  }
-}
+/* --------------------- End Home ------------------------- */
 
-@media screen and (max-width:576px) {
-  #home {
-    background-image: url('./images/bg-mobile/576.jpg');
-    height: 500px;
-  }
-
-  .home-caption {
-    bottom: 50px;
-  }
-
-  .home-caption h2 {
-    font-size: 2rem;
-  }
-
-  .home-caption p {
-    font-size: 1.5rem;
-  }
-  
-}
-
-@media screen and (max-width:576px) and (orientation: landscape) {
-  #home {
-  background-image: url('./images/bg-mobile/576.jpg')
- }
-}
+/* --------------------- Gallery ------------------------- */
 
 #gallery {
   margin-top: 100px;
@@ -335,37 +293,181 @@ header a:active, a:focus {
   left: 28px;
 }
 
-@media screen and (max-width:1200px) {
-  .btn-left {
-    left: -10px;
-  }
-  
-  .btn-right {
-    right: -10px;
-  }
+/* --------------------- End Gallery ------------------------- */
+
+/* --------------------- Information ------------------------- */
+
+#information {
+  margin-top: 70px;
+  min-height: 500px;
 }
 
-@media screen and (max-width:800px) {
-  #gallery-thumbnails img {
-    width: 100px;
-    height: 80px;
-  }
+#information ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+#information li a {
+  color: black;
+  font-size: 4rem;
+  margin: 0 10px;
+  text-decoration: none;
+  outline: none;
+}
+
+#information li a[aria-selected="true"] {
+  border-bottom: 3px solid #008BA5;
+}
+
+#information li a[aria-selected="false"] {
+  color: rgba(0,0,0,.6);
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+#project-sec:not([hidden="hidden"]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#project-sec h3 {
+  font-size: 3.25rem;
+  font-weight: 500;
+}
+
+table {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-left: 60px;
+}
+
+table td {
+  text-align: left;
+}
+
+table td:first-child {
+  width: 200px;
+}
+
+#location {
+  margin-top: 100px;
+  text-align: center;
+  position: relative;
+}
+
+/* --------------------- End Information ------------------------- */
+
+/* --------------------- Location ------------------------- */
+
+#location img {
+  max-width: 600px;
+}
+
+#location p {
+  font-size: 6rem;
+}
+
+#location p::after {
+  content: '';
+  background-color: #008BA5;
+  height: 2px;
+  width: 135px;
+  margin: 0 auto;
+  display: block;
+  margin-top: -15px;
+}
+
+.button-panel {
+  max-width: 600px;
+  margin-top: 50px;
+}
+
+.button-panel a {
+  text-decoration: none;
+  background-color: #008BA5;
+  color: white;
+  width: 250px;
+  font-size: 2.5rem;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  margin: 10px 0;
 }
 
 
-@media screen and (max-width:576px) {
-  #gallery-thumbnails img {
-    width: 80px;
-    height: 50px;
-  }
+/* --------------------- End Location ------------------------- */
+
+/* --------------------- Register ------------------------- */
+
+#register {
+  text-align: center;
+  margin: 100px 0;
+  position: relative;
 }
 
-@media screen and (max-width:450px) {
-  #gallery-thumbnails img {
-    width: 60px;
-    height: 40px;
-  }
+#register h2 {
+  font-weight: 500;
+  font-size: 6rem;
+  margin: 0;
 }
+
+#register p {
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-top: -30px;
+}
+
+#register p::after {
+  content: '';
+  background-color: #008BA5;
+  height: 2px;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+#register .row {
+  display: flex;
+  justify-content: center;
+}
+
+#register input {
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+#register input:active , input:focus {
+  border-color: #008BA5;
+}
+
+#register button {
+  background: #008BA5;
+  border-radius: 4px;
+  padding: 10px;
+  color: white;
+  width: 300px;
+  font-size: 2.5rem;
+}
+
+
+/* --------------------- End Register ------------------------- */
 
 
 footer {
@@ -399,4 +501,84 @@ footer span {
 @keyframes move2 {
   from { margin-left: -300px; opacity: 0; }
   to { margin-left: 0; opacity: 1; }
+}
+
+@media screen and (max-width:1280px) {
+  #home {
+    background-image: url('./images/bg/1280.jpg');
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .btn-left {
+    left: -10px;
+  }
+  
+  .btn-right {
+    right: -10px;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70px;
+  }
+  .main-logo {
+    font-size: 3rem;
+  }
+  .hamburger {
+    display: block;
+  }
+  .main-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width:800px) {
+  #gallery-thumbnails img {
+    width: 100px;
+    height: 80px;
+  }
+}
+
+
+@media screen and (max-width:576px) {
+  #home {
+    background-image: url('./images/bg-mobile/576.jpg');
+    height: 500px;
+  }
+
+  .home-caption {
+    bottom: 50px;
+  }
+
+  .home-caption h2 {
+    font-size: 2rem;
+  }
+
+  .home-caption p {
+    font-size: 1.5rem;
+  }
+
+  #gallery-thumbnails img {
+    width: 80px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width:576px) and (orientation: landscape) {
+  #home {
+  background-image: url('./images/bg-mobile/576.jpg')
+ }
+}
+
+
+@media screen and (max-width:450px) {
+  #gallery-thumbnails img {
+    width: 60px;
+    height: 40px;
+  }
 }

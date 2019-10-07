@@ -394,10 +394,14 @@ table td:first-child {
   color: white;
   width: 250px;
   font-size: 2.5rem;
-  padding: 10px;
+  padding: 5px;
   display: inline-block;
   border-radius: 4px;
   margin: 10px 0;
+}
+
+.button-panel a:hover {
+  opacity: 0.8;
 }
 
 
@@ -433,6 +437,7 @@ table td:first-child {
 }
 
 #register .row {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
 }
@@ -448,22 +453,27 @@ table td:first-child {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
+  outline: none;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 
 #register input:active , input:focus {
-  border-color: #008BA5;
+  border-color: #008BA5 !important;
 }
 
 #register button {
   background: #008BA5;
   border-radius: 4px;
-  padding: 10px;
+  padding: 5px;
   color: white;
   width: 300px;
   font-size: 2.5rem;
+}
+
+#register button:hover {
+  opacity: 0.8;
 }
 
 
@@ -563,9 +573,69 @@ footer span {
     font-size: 1.5rem;
   }
 
+  #gallery p {
+    font-size: 4rem;
+  }
+
+  .my-slider img {
+    height: 350px;
+  }
+
+  #gallery p::after {
+    width: 80px;
+  }
+
   #gallery-thumbnails img {
     width: 80px;
     height: 50px;
+  }
+
+  #information {
+    min-height: 400px;
+  }
+
+  #information li a {
+    font-size: 3rem;
+  }
+
+  .button-panel a {
+    width: 180px;
+    padding: 3px;
+    font-size: 2rem;
+  }
+
+  #project-sec h3 {
+    font-size: 2.5rem;
+  }
+
+  #location {
+    margin-top: 0;
+  }
+
+  #location p {
+    font-size: 4rem;
+  }
+
+  #location p::after {
+    width: 80px;
+  }
+
+  table {
+    font-size: 2rem;
+    margin-left: 20px;
+  }
+
+  #register h2 {
+    font-size: 4rem;
+  }
+
+  #register p {
+    font-size: 2rem;
+    margin-top: -15px;
+  }
+
+  #register p::after {
+    width: 150px;
   }
 
   footer {

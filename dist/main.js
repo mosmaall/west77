@@ -35,7 +35,21 @@ function isScroll(e) {
 }
 
 function toggleMenu(x) {
-    x.classList.toggle("change");
+	if(!x.classList.value.includes('change')) {
+		x.classList.toggle("change");
+		const menuPopup = document.createElement('div');
+		menuPopup.className = "menu-popup";
+		document.getElementsByClassName('mobile-nav')[0].classList.add('nav-visible');
+		document.body.appendChild(menuPopup);
+	} else {
+		x.classList.toggle("change");
+		document.getElementsByClassName('mobile-nav')[0].classList.remove('nav-visible');
+		document.getElementsByClassName('menu-popup')[0].remove()
+	}
+}
+
+function closeNav(x) {
+	document.getElementsByClassName('mobile-nav')[0].classList.remove('nav-visible');
 }
 
 function scrollTo() {

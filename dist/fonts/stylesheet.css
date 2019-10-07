@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'DB Helvethaica X 67 MedCond';
+    src: url('DBHelvethaicaX-67MedCond.woff2') format('woff2'),
+        url('DBHelvethaicaX-67MedCond.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DB Helvethaica X 67 MedCond';
+    src: url('DBHelvethaicaX-47LiCond.woff2') format('woff2'),
+        url('DBHelvethaicaX-47LiCond.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}

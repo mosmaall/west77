@@ -5,8 +5,8 @@ html {
 }
 
 body {
-  font-family: 'DB Helvethaica X 67 MedCond';
-  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
 ul li {
@@ -33,10 +33,10 @@ header.colored {
 }
 
 .main-logo {
-  top: 14px;
+  top: 20px;
   left: 35px;
   position: absolute;
-  font-size: 5.25rem;
+  font-size: 3.75rem;
   letter-spacing: 1.25px;
   font-weight: 300;
 }
@@ -64,7 +64,7 @@ header a:active, a:focus {
   justify-content: center;
   align-items: center;
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
 }
 
@@ -114,10 +114,10 @@ header a:active, a:focus {
 .menu-popup {
   position: fixed;
   background: rgba(0,0,0,.7);
-  width: 100vh;
+  width: 100vw;
   top: 0;
-  height: 100%;
-
+  height: 100vh;
+  animation: move1 0.5s;
 }
 
 .mobile-nav {
@@ -139,7 +139,7 @@ header a:active, a:focus {
 }
 
 .nav-visible li {
-  font-size: 2.75rem;
+  font-size: 2rem;
   padding: 10px;
   font-weight: 300;
   border-bottom: 1px solid rgba(255,255,255,.2);
@@ -178,15 +178,19 @@ header a:active, a:focus {
 }
 
 .home-caption h2 {
-  font-size: 4.25rem;
+  font-size: 3rem;
+  font-weight: 300;
   letter-spacing: 1px;
   margin-bottom: 0;
   animation: move1 1s;
 }
 
 .home-caption p {
-  font-size: 3rem;
+  font-size: 2.25rem;
+  font-weight: 300;
   margin: 0;
+  color: rgba(255,255,255,0.8);
+  margin-top: 5px;
   animation: move2 1s;
 }
 
@@ -201,7 +205,7 @@ header a:active, a:focus {
 }
 
 #gallery p {
-  font-size: 6rem;
+  font-size: 3rem;
 }
 
 #gallery p::after {
@@ -211,14 +215,13 @@ header a:active, a:focus {
   width: 135px;
   margin: 0 auto;
   display: block;
-  margin-top: -15px;
 }
 
 .my-slider img {
   cursor: pointer;
   width: auto;
   max-width: 100%;
-  height: 500px;
+  height: auto;
 }
 
 .my-slider:hover{
@@ -333,7 +336,6 @@ header a:active, a:focus {
 
 #information {
   margin-top: 70px;
-  min-height: 500px;
 }
 
 #information ul {
@@ -344,7 +346,7 @@ header a:active, a:focus {
 
 #information li a {
   color: black;
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0 10px;
   text-decoration: none;
   outline: none;
@@ -371,14 +373,16 @@ iframe {
 }
 
 #project-sec h3 {
-  font-size: 3.25rem;
+  font-size: 2.25rem;
   font-weight: 500;
+  margin-top: 20px;
 }
 
 table {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 300;
   margin-left: 60px;
+  line-height: 30px;
 }
 
 table td {
@@ -386,7 +390,7 @@ table td {
 }
 
 table td:first-child {
-  width: 200px;
+  width: 300px;
 }
 
 #location {
@@ -404,7 +408,7 @@ table td:first-child {
 }
 
 #location p {
-  font-size: 6rem;
+  font-size: 3rem;
 }
 
 #location p::after {
@@ -414,7 +418,6 @@ table td:first-child {
   width: 135px;
   margin: 0 auto;
   display: block;
-  margin-top: -15px;
 }
 
 .button-panel {
@@ -426,9 +429,9 @@ table td:first-child {
   text-decoration: none;
   background-color: #008BA5;
   color: white;
-  width: 250px;
-  font-size: 2.5rem;
-  padding: 5px;
+  width: 100%;
+  font-size: 2rem;
+  padding: 10px;
   display: inline-block;
   border-radius: 4px;
   margin: 10px 0;
@@ -451,14 +454,14 @@ table td:first-child {
 
 #register h2 {
   font-weight: 500;
-  font-size: 6rem;
+  font-size: 3rem;
   margin: 0;
 }
 
 #register p {
   font-weight: 300;
-  font-size: 2.5rem;
-  margin-top: -30px;
+  font-size: 1.5rem;
+  margin-top: -5px;
 }
 
 #register p::after {
@@ -479,8 +482,8 @@ table td:first-child {
 #register input {
   display: block;
   width: 100%;
-  padding: .5rem 1rem;
-  font-size: 2rem;
+  padding: .5rem 1.25rem;
+  font-size: 1.75rem;
   line-height: 1.5;
   margin-bottom: 20px;
   color: #495057;
@@ -500,10 +503,10 @@ table td:first-child {
 #register button {
   background: #008BA5;
   border-radius: 4px;
-  padding: 5px;
+  padding: 10px;
   color: white;
   width: 300px;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 #register button:hover {
@@ -521,7 +524,7 @@ footer {
   height: 75px;
   background: black;
   color: rgba(255,255,255,0.8);
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   letter-spacing: 2px;
   font-weight: 300;
 }
@@ -577,7 +580,7 @@ footer span {
     height: 70px;
   }
   .main-logo {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .hamburger {
     display: block;
@@ -594,7 +597,6 @@ footer span {
   }
 }
 
-
 @media screen and (max-width:576px) {
   #home {
     background-image: url('./images/bg-mobile/576.jpg');
@@ -606,19 +608,23 @@ footer span {
   }
 
   .home-caption h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .home-caption p {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+  }
+
+  #gallery {
+    margin-top: 60px;
   }
 
   #gallery p {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   .my-slider img {
-    height: 350px;
+    height: auto;
   }
 
   #gallery p::after {
@@ -631,29 +637,29 @@ footer span {
   }
 
   #information {
-    min-height: 400px;
+    margin-top: 60px;
   }
 
   #information li a {
-    font-size: 3rem;
+    font-size: 1.75rem;
   }
 
   .button-panel a {
-    width: 180px;
-    padding: 3px;
-    font-size: 2rem;
+    width: 100$;
+    padding: 8px;
+    font-size: 1.5rem;
   }
 
   #project-sec h3 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   #location {
-    margin-top: 0;
+    margin-top: 60px;
   }
 
   #location p {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   #location p::after {
@@ -661,32 +667,49 @@ footer span {
   }
 
   table {
-    font-size: 2rem;
-    margin-left: 20px;
+    font-size: 1.5rem;
+    margin-left: 15px;
+  }
+
+  table td:first-child {
+    width: 200px;
+  }
+
+  #register {
+    margin-top: 50px;
   }
 
   #register h2 {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   #register p {
-    font-size: 2rem;
-    margin-top: -15px;
+    font-size: 1.25rem;
+    margin-top: -5px;
   }
 
   #register p::after {
-    width: 150px;
+    width: 170px;
+  }
+
+  #register input {
+    font-size: 1.5rem;
+  }
+
+  #register button {
+    font-size: 1.75rem;
+    padding: 5px;
   }
 
   footer {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
-@media screen and (max-width:576px) and (orientation: landscape) {
+@media screen and (max-width:576px) {
   #home {
-  background-image: url('./images/bg-mobile/576.jpg')
- }
+    background-image: url('./images/bg-mobile/576.jpg')
+  }
 }
 
 
@@ -696,3 +719,90 @@ footer span {
     height: 40px;
   }
 }
+
+
+@media screen and (max-width:360px) {
+  #gallery-thumbnails img {
+    width: 60px;
+    height: 40px;
+  }
+  footer {
+    font-size: 0.795rem;
+  }
+}
+
+@media only screen and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape),
+  screen and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape),
+  screen and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape),
+  screen and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape),
+  screen and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape),
+  screen and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape),
+  screen and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape),
+  screen and (device-width: 480px) 
+  and (device-height: 800px) 
+  and (orientation: landscape),
+  screen and (device-width: 731px) 
+  and (device-height: 411px) 
+  and (orientation: landscape),
+  screen and (device-width: 823px) 
+  and (device-height: 411px) 
+  and (-webkit-device-pixel-ratio: 3.5) 
+  and (orientation: landscape){
+    #home {
+      height: 425px;
+      background-image: url('./images/bg/800.jpg')
+    }
+  
+    .home-caption {
+      bottom: 60px;
+      left: 8%;
+    }
+  
+    .home-caption h2 {
+      font-size: 2rem;
+    }
+  
+    .home-caption p {
+      font-size: 1.5rem;
+    }
+  
+    .my-slider img {
+      max-height: 220px;
+      height: auto;
+    }
+  
+    #gallery-thumbnails img {
+      height: 80px;
+    }
+  
+    iframe {
+      max-height: 250px;
+    }
+  
+    #location img {
+      max-height: 250px;
+      width: auto;
+    }
+}
+

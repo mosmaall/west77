@@ -23,7 +23,10 @@
     <!-- header -->
     <header>
       <div class="main-logo">
-        <a href=".">West 77</a>
+        <a href=".">
+          <img class="logo-img" src="./dist/images/logo/logo_w.png">
+          <div class="logo-txt">West 77</div>
+        </a>
       </div>
       <nav class="main-nav">
         <ul>
@@ -220,8 +223,8 @@
     </footer>
 
   </body>
-  <script src="./dist/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="./dist/main.js"></script>
   <script src="dist/tabby.polyfills.min.js"></script>
   <script>
     var slider = tns({
@@ -229,8 +232,7 @@
       "items": 1,
       "controlsContainer": "#customize-controls",
       "navContainer": "#gallery-thumbnails",
-      "navAsThumbnails": true,
-      "swipeAngle": false,
+      "navAsThumbnails": true
     });
     var tabs = new Tabby('[data-tabs]');
   </script>

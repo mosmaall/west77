@@ -21,24 +21,38 @@ header {
   left: 0;
   width: 100%;
   height: 100px;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,0.5);
   color: #fff;
   z-index: 20;
 }
 
 header.colored {
-  background: rgba(0,0,0,1);
+  background: rgba(0,0,0,.6);
   -webkit-transition: all 2s; /* Safari prior 6.1 */
   transition: all 1s;
 }
 
 .main-logo {
-  top: 20px;
+  top: 3px;
   left: 35px;
   position: absolute;
   font-size: 3.75rem;
   letter-spacing: 1.25px;
   font-weight: 300;
+}
+
+.logo-img {
+  width: 70px;
+  height: 100%;
+}
+
+.logo-txt {
+  font-size: 17px;
+  position: relative;
+  top: -18px;
+  left: 20px;
+  font-weight: 300;
+  opacity: 0.8;
 }
 
 header a {
@@ -83,6 +97,7 @@ header a:active, a:focus {
   display: none;
   cursor: pointer;
   margin-right: 35px;
+  opacity: 0.6;
 }
 
 .hamburger:hover {
@@ -90,7 +105,7 @@ header a:active, a:focus {
 }
 
 .bar1, .bar2, .bar3 {
-  width: 35px;
+  width: 30px;
   height: 4px;
   border-radius: 2px;
   background-color: #fff;
@@ -182,7 +197,7 @@ header a:active, a:focus {
   font-weight: 300;
   letter-spacing: 1px;
   margin-bottom: 0;
-  animation: move1 1s;
+  animation: move1 2s;
 }
 
 .home-caption p {
@@ -191,7 +206,7 @@ header a:active, a:focus {
   margin: 0;
   color: rgba(255,255,255,0.8);
   margin-top: 5px;
-  animation: move2 1s;
+  animation: move2 2s;
 }
 
 /* --------------------- End Home ------------------------- */
@@ -276,6 +291,7 @@ header a:active, a:focus {
 #gallery-thumbnails img {
   width: 150px;
   height: 100px;
+
   margin: 0 5px;
   cursor: pointer;
 }
@@ -297,7 +313,7 @@ header a:active, a:focus {
 }
 
 .popup img {
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .close {
@@ -427,7 +443,7 @@ table td:first-child {
 
 .button-panel a {
   text-decoration: none;
-  background-color: #008BA5;
+  background-color: #9a9a9a;
   color: white;
   width: 100%;
   font-size: 2rem;
@@ -501,7 +517,7 @@ table td:first-child {
 }
 
 #register button {
-  background: #008BA5;
+  background: #9a9a9a;
   border-radius: 4px;
   padding: 10px;
   color: white;
@@ -522,8 +538,8 @@ footer {
   justify-content: center;
   align-items: center;
   height: 75px;
-  background: black;
-  color: rgba(255,255,255,0.8);
+  background: white;
+  color: black;
   font-size: 1.75rem;
   letter-spacing: 2px;
   font-weight: 300;
@@ -532,7 +548,8 @@ footer {
 footer span {
   display: block;
   margin: 0 10px;
-  color: white;
+  color: black;
+  font-weight: 400;
 }
 
 @keyframes fade-in {
@@ -573,14 +590,26 @@ footer span {
 }
 
 @media screen and (max-width:1000px) {
+  .main-logo {
+    top: 0px;
+  }
+  .main-logo a {
+    display: flex;
+  }
+  .logo-img {
+    width: 70px;
+  }
+
+  .logo-txt {
+    font-size: 21px;
+    top: 23px;
+    left: 10px;
+  }
   header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 70px;
-  }
-  .main-logo {
-    font-size: 2.5rem;
   }
   .hamburger {
     display: block;
@@ -598,9 +627,22 @@ footer span {
 }
 
 @media screen and (max-width:576px) {
+  .main-logo {
+    top: 5px;
+    left: 25px;
+  }
+  .logo-img {
+    width: 60px;
+  }
+  .logo-txt {
+    font-size: 19px;
+    top: 18px;
+  }
+
   #home {
-    background-image: url('./images/bg-mobile/576.jpg');
+    background-image: url('./images/bg/800.jpg');
     height: 500px;
+    margin-top: -47px;
   }
 
   .home-caption {
@@ -645,7 +687,7 @@ footer span {
   }
 
   .button-panel a {
-    width: 100$;
+    width: 100%;
     padding: 8px;
     font-size: 1.5rem;
   }
@@ -708,7 +750,9 @@ footer span {
 
 @media screen and (max-width:576px) {
   #home {
-    background-image: url('./images/bg-mobile/576.jpg')
+    background-image: url('./images/bg/800.jpg');
+    background-position: 70% 94%;
+    background-size: auto;
   }
 }
 
@@ -720,14 +764,23 @@ footer span {
   }
 }
 
+@media screen and (max-width:400px) {
+  footer {
+    height: 120px;
+    flex-direction: column;
+  }
+
+  footer span {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+
 
 @media screen and (max-width:360px) {
   #gallery-thumbnails img {
     width: 60px;
     height: 40px;
-  }
-  footer {
-    font-size: 0.795rem;
   }
 }
 
@@ -768,7 +821,9 @@ footer span {
   screen and (device-width: 823px) 
   and (device-height: 411px) 
   and (-webkit-device-pixel-ratio: 3.5) 
-  and (orientation: landscape){
+  and (orientation: landscape),
+  (-webkit-min-device-pixel-ratio: 3) 
+    and (min-resolution: 192dpi){
     #home {
       height: 425px;
       background-image: url('./images/bg/800.jpg')
@@ -806,3 +861,24 @@ footer span {
     }
 }
 
+
+.btn-modal-left {
+  left: 5px;
+}
+
+.btn-modal-right {
+  right: 5px;
+}
+
+#control-modal button {
+  position: absolute;
+  outline: none;
+  background: transparent;
+  border: none;
+  z-index: 999;
+}
+
+.white {
+  border: solid rgba(255,255,255,0.2);
+  border-width: 0 5px 5px 0;
+}

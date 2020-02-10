@@ -12,13 +12,50 @@ function showFullImage(name) {
 	button.className = "close";
 	button.onclick = () => closePopup(this);
 
-	const img = document.createElement('img');
-	img.src = `dist/images/gallery/rsz_gallery_${name}.jpg`
 
-	popup.appendChild(img);
+	const modalSlider = document.createElement('div');
+	modalSlider.id = 'modal-slider';
+
+	for(let i=1;i<6;i++){
+		var modalImg = createImage(i);
+		modalSlider.appendChild(modalImg);
+	}
+
+	const control = document.createElement('div');
+	control.id = "control-modal"
+	
+	const buttonGroup = `
+		<button class="btn-modal-left"><i class="arrow white left"></i></button>
+		<button class="btn-modal-right"><i class="arrow white right"></i></button>
+	`
+	control.innerHTML = buttonGroup;
+	
+	popup.appendChild(control);
+	popup.appendChild(modalSlider);
 	popup.appendChild(button);
-
 	document.body.appendChild(popup);
+
+	var popupSlider = tns({
+		"container": "#modal-slider",
+		"items": 1,
+		"swipeAngle": 100,
+		"speed": 50,
+		"index": name,
+		"nav": false,
+		"center": true,
+		"mode": "gallery",
+		"controlsContainer": "#control-modal"
+	})
+
+	popupSlider.goTo(name - 1);
+}
+
+function createImage(name) {
+	const imgWrap = document.createElement('div');
+	const img = document.createElement('img');
+	img.src = `dist/images/gallery/rsz_gallery_${name}.jpg`;
+	imgWrap.appendChild(img);
+	return imgWrap;
 }
 
 function closePopup() {
